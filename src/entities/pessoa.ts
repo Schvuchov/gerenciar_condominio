@@ -19,7 +19,7 @@ class Pessoa {
         this.email = email;
     }
 
-    public exibirDataNascimento(dataNascimento: Date){
+    getDataNascimento(){
         return this.dataNascimento
     }
 }

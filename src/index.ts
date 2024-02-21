@@ -15,7 +15,6 @@ const sindico = new Cargo("Sindico", 50);
 const endereco1 = new Endereco("Rua tal", "Bla", "Floripa", "SC", 880456764)
 const endereco2 = new Endereco("Rua abc", "Blo", "Floripa", "SC", 880434234)
 const endereco3 = new Endereco("Rua ble", "Blu", "Floripa", "SC", 880454674)
-
 const endereco4 = new Endereco("rua condo", "condo", "floripa", "sc", 23432535)
 
 
@@ -53,3 +52,20 @@ const morador2 = new Morador(pessoa5, apartamento2)
 const morador3 = new Morador(pessoa8, apartamento2)
 const morador4 = new Morador(pessoa6, apartamento3)
 const morador5 = new Morador(pessoa7, apartamento3)
+
+
+
+//filtro de salarios dos zeladores
+
+const zeladores = listaFuncionarios.filter(funcionario => funcionario.getCargo().getDescricao() === "Zelador");
+
+const salarioZeladores = zeladores.map(zelador => zelador.getSalario());
+
+console.log("Salarios dos zeladores: "+ salarioZeladores)
+
+
+
+// filtro de moradores menores de idade
+
+console.log("Moradores menores de idade apto2: "+apartamento2.menorDeIdade())
+console.log("Moradores menores de idade apto3: "+apartamento3.menorDeIdade())

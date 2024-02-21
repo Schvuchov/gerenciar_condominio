@@ -19,10 +19,7 @@ class Apartamento {
 
 
     public menorDeIdade(): Morador[] {
-        return this.moradores.filter(morador => {
-            const idade = new Date().getFullYear() - morador.dataNascimento.getFullYear();
-            return idade < 18;
-        });
+        return this.moradores.filter(morador => morador.getIdade() < 18);
     }
 }
 

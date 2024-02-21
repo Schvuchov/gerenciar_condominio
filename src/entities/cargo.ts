@@ -7,6 +7,10 @@ class Cargo {
         this.cargaHoraria = cargaHoraria
     }
 
+    getDescricao(){
+        return this.descricao
+    }
+
 }
 
 export default Cargo;
