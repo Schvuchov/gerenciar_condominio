@@ -7,7 +7,7 @@ class Cargo {
         this.cargaHoraria = cargaHoraria
     }
 
-    getDescricao(){
+    public getDescricao(){
         return this.descricao
     }
 

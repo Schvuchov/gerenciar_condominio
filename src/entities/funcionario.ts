@@ -12,11 +12,11 @@ class Funcionario {
         this.salario = salario;
     }
 
-    getCargo(){
+    public getCargo(){
         return this.cargo
     }
 
-    getSalario(){
+    public getSalario(){
         return this.salario
     }
 }
