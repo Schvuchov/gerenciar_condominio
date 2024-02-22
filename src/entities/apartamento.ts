@@ -18,7 +18,7 @@ class Apartamento {
     }
 
 
-    public menorDeIdade(): Morador[] {
+    public menorDeIdade(): Array<Morador> {
         return this.moradores.filter(morador => morador.getIdade() < 18);
     }
 }

@@ -53,6 +53,12 @@ const morador3 = new Morador(pessoa8, apartamento2)
 const morador4 = new Morador(pessoa6, apartamento3)
 const morador5 = new Morador(pessoa7, apartamento3)
 
+apartamento1.adicionarMorador(morador1);
+apartamento2.adicionarMorador(morador2);
+apartamento2.adicionarMorador(morador3);
+apartamento3.adicionarMorador(morador4);
+apartamento3.adicionarMorador(morador5);
+
 
 
 //filtro de salarios dos zeladores
@@ -67,5 +73,10 @@ console.log("Salarios dos zeladores: "+ salarioZeladores)
 
 // filtro de moradores menores de idade
 
-console.log("Moradores menores de idade apto2: "+apartamento2.menorDeIdade())
-console.log("Moradores menores de idade apto3: "+apartamento3.menorDeIdade())
+const listaApartamentos = [ apartamento1, apartamento2, apartamento3]
+
+const menoresDeIdade = listaApartamentos.flatMap(apartamento => apartamento.menorDeIdade())
+
+console.log("Moradores menores de idade: ")
+menoresDeIdade.forEach(menor => console.log(menor.getPessoa().getNome()))
+

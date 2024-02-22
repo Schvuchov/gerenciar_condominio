@@ -11,11 +11,16 @@ class Morador {
         
     }
 
+
     public getIdade(): number {
         const dataNascimento = this.pessoa.getDataNascimento();
         const hoje = new Date();
         const diferencaAnos = hoje.getFullYear() - dataNascimento.getFullYear();
         return diferencaAnos;
+    }
+
+    getPessoa(): Pessoa {
+        return this.pessoa;
     }
 
 }
